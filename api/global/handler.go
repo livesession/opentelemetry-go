@@ -19,6 +19,8 @@ import (
 	"os"
 	"sync"
 	"sync/atomic"
+
+	"github.com/livesession/opentelemetry-go"
 )
 
 var (

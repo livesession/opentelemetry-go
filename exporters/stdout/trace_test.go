@@ -23,11 +23,11 @@ import (
 
 	"google.golang.org/grpc/codes"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/exporters/stdout"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/exporters/stdout"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 func TestExporter_ExportSpan(t *testing.T) {

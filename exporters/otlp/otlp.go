@@ -25,15 +25,15 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	colmetricpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/collector/metrics/v1"
-	coltracepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/collector/trace/v1"
+	colmetricpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/collector/metrics/v1"
+	coltracepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/collector/trace/v1"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/exporters/otlp/internal/transform"
-	metricsdk "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	tracesdk "go.opentelemetry.io/otel/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/exporters/otlp/internal/transform"
+	metricsdk "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	tracesdk "github.com/livesession/opentelemetry-go/sdk/export/trace"
 )
 
 type Exporter struct {
@@ -226,7 +226,7 @@ func (e *Exporter) Stop() error {
 	return err
 }
 
-// Export implements the "go.opentelemetry.io/otel/sdk/export/metric".Exporter
+// Export implements the "github.com/livesession/opentelemetry-go/sdk/export/metric".Exporter
 // interface. It transforms and batches metric Records into OTLP Metrics and
 // transmits them to the configured collector.
 func (e *Exporter) Export(parent context.Context, cps metricsdk.CheckpointSet) error {

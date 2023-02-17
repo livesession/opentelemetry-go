@@ -18,8 +18,8 @@ import (
 	"io"
 	"os"
 
-	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/label"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 )
 
 var (

@@ -17,12 +17,12 @@ package transform
 import (
 	"google.golang.org/grpc/codes"
 
-	tracepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
+	tracepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
 )
 
 const (

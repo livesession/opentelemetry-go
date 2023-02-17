@@ -1,8 +1,8 @@
 # OpenTelemetry-Go
 
 [![Circle CI](https://circleci.com/gh/open-telemetry/opentelemetry-go.svg?style=svg)](https://circleci.com/gh/open-telemetry/opentelemetry-go)
-[![Docs](https://godoc.org/go.opentelemetry.io/otel?status.svg)](https://pkg.go.dev/go.opentelemetry.io/otel)
-[![Go Report Card](https://goreportcard.com/badge/go.opentelemetry.io/otel)](https://goreportcard.com/report/go.opentelemetry.io/otel)
+[![Docs](https://godoc.org/github.com/livesession/opentelemetry-go?status.svg)](https://pkg.go.dev/github.com/livesession/opentelemetry-go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/livesession/opentelemetry-go)](https://goreportcard.com/report/github.com/livesession/opentelemetry-go)
 [![Gitter](https://badges.gitter.im/open-telemetry/opentelemetry-go.svg)](https://gitter.im/open-telemetry/opentelemetry-go?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 The Go [OpenTelemetry](https://opentelemetry.io/) client.
@@ -19,7 +19,7 @@ Libraries that produce telemetry data should only depend on `api`
 and defer the choice of the SDK to the application developer. Applications may
 depend on `sdk` or another package that implements the API.
 
-All packages are published to [go.opentelemetry.io/otel](https://pkg.go.dev/go.opentelemetry.io/otel) and is the preferred location to import from.
+All packages are published to [github.com/livesession/opentelemetry-go](https://pkg.go.dev/github.com/livesession/opentelemetry-go) and is the preferred location to import from.
 
 Additional resources:
 
@@ -37,9 +37,9 @@ import (
 	"context"
 	"log"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/exporters/stdout"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/exporters/stdout"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 func main() {
@@ -57,15 +57,15 @@ func main() {
 ```
 
 See the [API
-documentation](https://pkg.go.dev/go.opentelemetry.io/otel) for more
+documentation](https://pkg.go.dev/github.com/livesession/opentelemetry-go) for more
 detail, and the
 [opentelemetry examples](./example/).
 
 ## Compatible Exporters
 
 See the Go packages depending upon
-[sdk/export/trace](https://pkg.go.dev/go.opentelemetry.io/otel/sdk/export/trace?tab=importedby)
-and [sdk/export/metric](https://pkg.go.dev/go.opentelemetry.io/otel/sdk/export/metric?tab=importedby)
+[sdk/export/trace](https://pkg.go.dev/github.com/livesession/opentelemetry-go/sdk/export/trace?tab=importedby)
+and [sdk/export/metric](https://pkg.go.dev/github.com/livesession/opentelemetry-go/sdk/export/metric?tab=importedby)
 for a list of all exporters compatible with OpenTelemetry's Go SDK.
 
 ## Compatible Libraries

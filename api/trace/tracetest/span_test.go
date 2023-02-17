@@ -136,7 +136,7 @@ func TestSpan(t *testing.T) {
 			}{
 				{
 					err: ottest.NewTestError("test error"),
-					typ: "go.opentelemetry.io/otel/internal/testing.TestError",
+					typ: "github.com/livesession/opentelemetry-go/internal/testing.TestError",
 					msg: "test error",
 				},
 				{
@@ -193,7 +193,7 @@ func TestSpan(t *testing.T) {
 				Timestamp: testTime,
 				Name:      "error",
 				Attributes: map[label.Key]label.Value{
-					label.Key("error.type"):    label.StringValue("go.opentelemetry.io/otel/internal/testing.TestError"),
+					label.Key("error.type"):    label.StringValue("github.com/livesession/opentelemetry-go/internal/testing.TestError"),
 					label.Key("error.message"): label.StringValue(errMsg),
 				},
 			}}

@@ -23,16 +23,16 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	coltracepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/collector/trace/v1"
-	commonpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
-	resourcepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/resource/v1"
-	tracepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
-	"go.opentelemetry.io/otel/label"
+	coltracepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/collector/trace/v1"
+	commonpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
+	resourcepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/resource/v1"
+	tracepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
+	"github.com/livesession/opentelemetry-go/label"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	tracesdk "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	tracesdk "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 type traceServiceClientStub struct {

@@ -14,7 +14,7 @@
 
 // Example using the OTLP exporter + collector + third-party backends. For
 // information about using the exporter, see:
-// https://pkg.go.dev/go.opentelemetry.io/otel/exporters/otlp?tab=doc#example-package-Insecure
+// https://pkg.go.dev/github.com/livesession/opentelemetry-go/exporters/otlp?tab=doc#example-package-Insecure
 package main
 
 import (
@@ -25,17 +25,17 @@ import (
 
 	"google.golang.org/grpc"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/exporters/otlp"
-	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/metric/controller/push"
-	"go.opentelemetry.io/otel/sdk/metric/processor/basic"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
-	"go.opentelemetry.io/otel/sdk/resource"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
-	"go.opentelemetry.io/otel/semconv"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/exporters/otlp"
+	"github.com/livesession/opentelemetry-go/label"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/push"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
+	"github.com/livesession/opentelemetry-go/semconv"
 )
 
 // Initializes an OTLP exporter, and configures the corresponding trace and

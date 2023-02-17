@@ -21,10 +21,10 @@ import (
 	"strings"
 	"time"
 
-	apimetric "go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
+	apimetric "github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 )
 
 type metricExporter struct {

@@ -29,16 +29,16 @@ import (
 	"google.golang.org/api/support/bundler"
 	"google.golang.org/grpc/codes"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/trace"
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	gen "go.opentelemetry.io/otel/exporters/trace/jaeger/internal/gen-go/jaeger"
-	ottest "go.opentelemetry.io/otel/internal/testing"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	gen "github.com/livesession/opentelemetry-go/exporters/trace/jaeger/internal/gen-go/jaeger"
+	ottest "github.com/livesession/opentelemetry-go/internal/testing"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 const (

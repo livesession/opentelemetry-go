@@ -25,13 +25,13 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Rename `api/testharness` to `api/apitest`. (#1049)
 - Rename `api/trace/testtrace` to `api/trace/tracetest`. (#1049)
 - Change Metric Processor to merge multiple observations. (#1024)
-- The `go.opentelemetry.io/otel/bridge/opentracing` bridge package has been made into its own module.
+- The `github.com/livesession/opentelemetry-go/bridge/opentracing` bridge package has been made into its own module.
    This removes the package dependencies of this bridge from the rest of the OpenTelemetry based project. (#1038)
-- Renamed `go.opentelemetry.io/otel/api/standard` package to `go.opentelemetry.io/otel/semconv` to avoid the ambiguous and generic name `standard` and better describe the package as containing OpenTelemetry semantic conventions. (#1016)
+- Renamed `github.com/livesession/opentelemetry-go/api/standard` package to `github.com/livesession/opentelemetry-go/semconv` to avoid the ambiguous and generic name `standard` and better describe the package as containing OpenTelemetry semantic conventions. (#1016)
 - The environment variable used for resource detection has been changed from `OTEL_RESOURCE_LABELS` to `OTEL_RESOURCE_ATTRIBUTES` (#1042)
 - Replace `WithSyncer` with `WithBatcher` in examples. (#1044)
-- Replace the `google.golang.org/grpc/codes` dependency in the API with an equivalent `go.opentelemetry.io/otel/codes` package. (#1046)
-- Merge the `go.opentelemetry.io/otel/api/label` and `go.opentelemetry.io/otel/api/kv` into the new `go.opentelemetry.io/otel/label` package. (#1060)
+- Replace the `google.golang.org/grpc/codes` dependency in the API with an equivalent `github.com/livesession/opentelemetry-go/codes` package. (#1046)
+- Merge the `github.com/livesession/opentelemetry-go/api/label` and `github.com/livesession/opentelemetry-go/api/kv` into the new `github.com/livesession/opentelemetry-go/label` package. (#1060)
 - Unify Callback Function Naming.
    Rename `*Callback` with `*Func`. (#1061)
 - CI builds validate against last two versions of Go, dropping 1.13 and adding 1.15. (#1064)
@@ -55,7 +55,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - The `semconv.HTTPServerMetricAttributesFromHTTPRequest()` function no longer generates the high-cardinality `http.request.content.length` label. (#1031)
 - Correct instrumentation version tag in Jaeger exporter. (#1037)
 - The SDK span will now set an error event if the `End` method is called during a panic (i.e. it was deferred). (#1043)
-- Move internally generated protobuf code from the `go.opentelemetry.io/otel` to the OTLP exporter to reduce dependency overhead. (#1050)
+- Move internally generated protobuf code from the `github.com/livesession/opentelemetry-go` to the OTLP exporter to reduce dependency overhead. (#1050)
 - The `otel-collector` example referenced outdated collector processors. (#1006)
 
 ## [0.10.0] - 2020-07-29
@@ -73,10 +73,10 @@ This release migrates the default OpenTelemetry SDK into its own Go module, deco
 
 - Replace the `RegisterGlobal` `Option` in the Jaeger exporter with an `InstallNewPipeline` constructor function.
    This matches the other exporter constructor patterns and will register a new exporter after building it with default configuration. (#944)
-- The trace (`go.opentelemetry.io/otel/exporters/trace/stdout`) and metric (`go.opentelemetry.io/otel/exporters/metric/stdout`) `stdout` exporters are now merged into a single exporter at `go.opentelemetry.io/otel/exporters/stdout`.
-   This new exporter was made into its own Go module to follow the pattern of all exporters and decouple it from the `go.opentelemetry.io/otel` module. (#956, #963)
-- Move the `go.opentelemetry.io/otel/exporters/test` test package to `go.opentelemetry.io/otel/sdk/export/metric/metrictest`. (#962)
-- The `go.opentelemetry.io/otel/api/kv/value` package was merged into the parent `go.opentelemetry.io/otel/api/kv` package. (#968)
+- The trace (`github.com/livesession/opentelemetry-go/exporters/trace/stdout`) and metric (`github.com/livesession/opentelemetry-go/exporters/metric/stdout`) `stdout` exporters are now merged into a single exporter at `github.com/livesession/opentelemetry-go/exporters/stdout`.
+   This new exporter was made into its own Go module to follow the pattern of all exporters and decouple it from the `github.com/livesession/opentelemetry-go` module. (#956, #963)
+- Move the `github.com/livesession/opentelemetry-go/exporters/test` test package to `github.com/livesession/opentelemetry-go/sdk/export/metric/metrictest`. (#962)
+- The `github.com/livesession/opentelemetry-go/api/kv/value` package was merged into the parent `github.com/livesession/opentelemetry-go/api/kv` package. (#968)
   - `value.Bool` was replaced with `kv.BoolValue`.
   - `value.Int64` was replaced with `kv.Int64Value`.
   - `value.Uint64` was replaced with `kv.Uint64Value`.
@@ -88,15 +88,15 @@ This release migrates the default OpenTelemetry SDK into its own Go module, deco
   - `value.Int` was replaced with `kv.IntValue`.
   - `value.Uint` was replaced with `kv.UintValue`.
   - `value.Array` was replaced with `kv.ArrayValue`.
-- Rename `Infer` to `Any` in the `go.opentelemetry.io/otel/api/kv` package. (#972)
+- Rename `Infer` to `Any` in the `github.com/livesession/opentelemetry-go/api/kv` package. (#972)
 - Change `othttp` to use the `httpsnoop` package to wrap the `ResponseWriter` so that optional interfaces (`http.Hijacker`, `http.Flusher`, etc.) that are implemented by the original `ResponseWriter`are also implemented by the wrapped `ResponseWriter`. (#979)
-- Rename `go.opentelemetry.io/otel/sdk/metric/aggregator/test` package to `go.opentelemetry.io/otel/sdk/metric/aggregator/aggregatortest`. (#980)
-- Make the SDK into its own Go module called `go.opentelemetry.io/otel/sdk`. (#985)
+- Rename `github.com/livesession/opentelemetry-go/sdk/metric/aggregator/test` package to `github.com/livesession/opentelemetry-go/sdk/metric/aggregator/aggregatortest`. (#980)
+- Make the SDK into its own Go module called `github.com/livesession/opentelemetry-go/sdk`. (#985)
 - Changed the default trace `Sampler` from `AlwaysOn` to `ParentOrElse(AlwaysOn)`. (#989)
 
 ### Removed
 
-- The `IndexedAttribute` function from the `go.opentelemetry.io/otel/api/label` package was removed in favor of `IndexedLabel` which it was synonymous with. (#970)
+- The `IndexedAttribute` function from the `github.com/livesession/opentelemetry-go/api/label` package was removed in favor of `IndexedLabel` which it was synonymous with. (#970)
 
 ### Fixed
 
@@ -104,9 +104,9 @@ This release migrates the default OpenTelemetry SDK into its own Go module, deco
 - Bump github.com/google/go-cmp from 0.5.0 to 0.5.1. (#957)
 - Use `global.Handle` for span export errors in the OTLP exporter. (#946)
 - Correct Go language formatting in the README documentation. (#961)
-- Remove default SDK dependencies from the `go.opentelemetry.io/otel/api` package. (#977)
-- Remove default SDK dependencies from the `go.opentelemetry.io/otel/instrumentation` package. (#983)
-- Move documented examples for `go.opentelemetry.io/otel/instrumentation/grpctrace` interceptors into Go example tests. (#984)
+- Remove default SDK dependencies from the `github.com/livesession/opentelemetry-go/api` package. (#977)
+- Remove default SDK dependencies from the `github.com/livesession/opentelemetry-go/instrumentation` package. (#983)
+- Move documented examples for `github.com/livesession/opentelemetry-go/instrumentation/grpctrace` interceptors into Go example tests. (#984)
 
 ## [0.9.0] - 2020-07-20
 
@@ -116,7 +116,7 @@ This release migrates the default OpenTelemetry SDK into its own Go module, deco
 - A Detector to automatically detect resources from an environment variable. (#939)
 - Github action to generate protobuf Go bindings locally in `internal/opentelemetry-proto-gen`. (#938)
 - OTLP .proto files from `open-telemetry/opentelemetry-proto` imported as a git submodule under `internal/opentelemetry-proto`.
-   References to `github.com/open-telemetry/opentelemetry-proto` changed to `go.opentelemetry.io/otel/internal/opentelemetry-proto-gen`. (#942)
+   References to `github.com/open-telemetry/opentelemetry-proto` changed to `github.com/livesession/opentelemetry-go/internal/opentelemetry-proto-gen`. (#942)
 
 ### Changed
 
@@ -214,8 +214,8 @@ This release implements the v0.5.0 version of the OpenTelemetry specification.
 - New example that uses OTLP and the collector. (#790)
 - Handle errors in the span `SetName` during span initialization. (#791)
 - Default service config to enable retries for retry-able failed requests in the OTLP exporter and an option to override this default. (#777)
-- New `go.opentelemetry.io/otel/api/oterror` package to uniformly support error handling and definitions for the project. (#778)
-- New `global` default implementation of the `go.opentelemetry.io/otel/api/oterror.Handler` interface to be used to handle errors prior to an user defined `Handler`.
+- New `github.com/livesession/opentelemetry-go/api/oterror` package to uniformly support error handling and definitions for the project. (#778)
+- New `global` default implementation of the `github.com/livesession/opentelemetry-go/api/oterror.Handler` interface to be used to handle errors prior to an user defined `Handler`.
    There is also functionality for the user to register their `Handler` as well as a convenience function `Handle` to handle an error with this global `Handler`(#778)
 - Options to specify propagators for httptrace and grpctrace instrumentation. (#784)
 - The required `application/json` header for the Zipkin exporter is included in all exports. (#774)
@@ -537,7 +537,7 @@ There is still a possibility of breaking changes.
 ### Changed
 
 - Rename the `exporter` directory to `exporters`.
-   The `go.opentelemetry.io/otel/exporter/trace/jaeger` package was mistakenly released with a `v1.0.0` tag instead of `v0.1.0`.
+   The `github.com/livesession/opentelemetry-go/exporter/trace/jaeger` package was mistakenly released with a `v1.0.0` tag instead of `v0.1.0`.
    This resulted in all subsequent releases not becoming the default latest.
    A consequence of this was that all `go get`s pulled in the incompatible `v0.1.0` release of that package when pulling in more recent packages from other otel packages.
    Renaming the `exporter` directory to `exporters` fixes this issue by renaming the package and therefore clearing any existing dependency tags.

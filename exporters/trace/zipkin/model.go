@@ -21,9 +21,9 @@ import (
 
 	zkmodel "github.com/openzipkin/zipkin-go/model"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
 )
 
 func toZipkinSpanModels(batch []*export.SpanData, serviceName string) []zkmodel.SpanModel {

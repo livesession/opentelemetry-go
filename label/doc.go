@@ -13,4 +13,4 @@
 // limitations under the License.
 
 // Package label provides key and value labels.
-package label // import "go.opentelemetry.io/otel/label"
+package label // import "github.com/livesession/opentelemetry-go/label"

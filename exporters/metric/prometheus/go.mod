@@ -1,15 +1,15 @@
-module go.opentelemetry.io/otel/exporters/metric/prometheus
+module github.com/livesession/opentelemetry-go/exporters/metric/prometheus
 
 go 1.14
 
 replace (
-	go.opentelemetry.io/otel => ../../..
-	go.opentelemetry.io/otel/sdk => ../../../sdk
+	github.com/livesession/opentelemetry-go => ../../..
+	github.com/livesession/opentelemetry-go/sdk => ../../../sdk
 )
 
 require (
 	github.com/prometheus/client_golang v1.7.1
 	github.com/stretchr/testify v1.6.1
-	go.opentelemetry.io/otel v0.11.0
-	go.opentelemetry.io/otel/sdk v0.11.0
+	github.com/livesession/opentelemetry-go v0.11.0
+	github.com/livesession/opentelemetry-go/sdk v0.11.0
 )

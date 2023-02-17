@@ -23,16 +23,16 @@ import (
 	"strings"
 	"sync"
 
-	commonpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
-	metricpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/metrics/v1"
-	resourcepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/resource/v1"
+	commonpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
+	metricpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/metrics/v1"
+	resourcepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/resource/v1"
 
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 var (

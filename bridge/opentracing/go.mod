@@ -1,10 +1,10 @@
-module go.opentelemetry.io/otel/bridge/opentracing
+module github.com/livesession/opentelemetry-go/bridge/opentracing
 
 go 1.14
 
-replace go.opentelemetry.io/otel => ../..
+replace github.com/livesession/opentelemetry-go => ../..
 
 require (
 	github.com/opentracing/opentracing-go v1.2.0
-	go.opentelemetry.io/otel v0.11.0
+	github.com/livesession/opentelemetry-go v0.11.0
 )

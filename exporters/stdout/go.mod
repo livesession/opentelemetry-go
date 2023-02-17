@@ -1,15 +1,15 @@
-module go.opentelemetry.io/otel/exporters/stdout
+module github.com/livesession/opentelemetry-go/exporters/stdout
 
 go 1.14
 
 replace (
-	go.opentelemetry.io/otel => ../..
-	go.opentelemetry.io/otel/sdk => ../../sdk/
+	github.com/livesession/opentelemetry-go => ../..
+	github.com/livesession/opentelemetry-go/sdk => ../../sdk/
 )
 
 require (
 	github.com/stretchr/testify v1.6.1
-	go.opentelemetry.io/otel v0.11.0
-	go.opentelemetry.io/otel/sdk v0.11.0
+	github.com/livesession/opentelemetry-go v0.11.0
+	github.com/livesession/opentelemetry-go/sdk v0.11.0
 	google.golang.org/grpc v1.31.0
 )

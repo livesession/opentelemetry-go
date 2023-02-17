@@ -17,4 +17,4 @@
 // OpenTelemetry semantic conventions are agreed standardized naming
 // patterns for OpenTelemetry things. This package aims to be the
 // centralized place to interact with these conventions.
-package semconv // import "go.opentelemetry.io/otel/semconv"
+package semconv // import "github.com/livesession/opentelemetry-go/semconv"

@@ -15,10 +15,10 @@
 package transform
 
 import (
-	commonpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
-	"go.opentelemetry.io/otel/label"
+	commonpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
+	"github.com/livesession/opentelemetry-go/label"
 
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 // Attributes transforms a slice of KeyValues into a slice of OTLP attribute key-values.

@@ -15,14 +15,14 @@
 package stdout
 
 import (
-	"go.opentelemetry.io/otel/api/global"
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/metric/controller/push"
-	"go.opentelemetry.io/otel/sdk/metric/processor/basic"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/push"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 type Exporter struct {
@@ -81,12 +81,12 @@ func NewExportPipeline(exportOpts []Option, pushOpts []push.Option) (apitrace.Pr
 //
 // Typically this is called as:
 //
-// 	pipeline, err := stdout.InstallNewPipeline(stdout.Config{...})
-// 	if err != nil {
-// 		...
-// 	}
-// 	defer pipeline.Stop()
-// 	... Done
+//	pipeline, err := stdout.InstallNewPipeline(stdout.Config{...})
+//	if err != nil {
+//		...
+//	}
+//	defer pipeline.Stop()
+//	... Done
 func InstallNewPipeline(exportOpts []Option, pushOpts []push.Option) (*push.Controller, error) {
 	traceProvider, controller, err := NewExportPipeline(exportOpts, pushOpts)
 	if err != nil {

@@ -20,8 +20,8 @@ import (
 	"strconv"
 	"strings"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // Environment variable names

@@ -22,10 +22,10 @@ import (
 	"sync"
 	"time"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/exporters/metric/prometheus"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/exporters/metric/prometheus"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 var (

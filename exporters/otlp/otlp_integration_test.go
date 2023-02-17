@@ -25,20 +25,20 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	commonpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
-	metricpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/metrics/v1"
-	"go.opentelemetry.io/otel/label"
+	commonpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
+	metricpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/metrics/v1"
+	"github.com/livesession/opentelemetry-go/label"
 
-	"go.opentelemetry.io/otel/api/metric"
-	metricapi "go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/exporters/otlp"
-	metricsdk "go.opentelemetry.io/otel/sdk/export/metric"
-	exporttrace "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/metric/controller/push"
-	processor "go.opentelemetry.io/otel/sdk/metric/processor/basic"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
-	"go.opentelemetry.io/otel/sdk/resource"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	metricapi "github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/exporters/otlp"
+	metricsdk "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	exporttrace "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/push"
+	processor "github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 func TestNewExporter_endToEnd(t *testing.T) {

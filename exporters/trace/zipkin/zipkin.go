@@ -25,9 +25,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"go.opentelemetry.io/otel/api/global"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 // Exporter exports SpanData to the zipkin collector. It implements

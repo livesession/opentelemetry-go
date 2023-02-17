@@ -21,13 +21,13 @@ import (
 	"sync"
 	"time"
 
-	otelcorrelation "go.opentelemetry.io/otel/api/correlation"
-	oteltrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/codes"
-	otelparent "go.opentelemetry.io/otel/internal/trace/parent"
-	"go.opentelemetry.io/otel/label"
+	otelcorrelation "github.com/livesession/opentelemetry-go/api/correlation"
+	oteltrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/codes"
+	otelparent "github.com/livesession/opentelemetry-go/internal/trace/parent"
+	"github.com/livesession/opentelemetry-go/label"
 
-	"go.opentelemetry.io/otel/bridge/opentracing/migration"
+	"github.com/livesession/opentelemetry-go/bridge/opentracing/migration"
 )
 
 var (

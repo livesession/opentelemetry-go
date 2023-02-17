@@ -1,6 +1,6 @@
 # OpenTelemetry Collector Go Exporter
 
-[![GoDoc](https://godoc.org/go.opentelemetry.io/otel?status.svg)](https://pkg.go.dev/go.opentelemetry.io/otel/exporters/otlp)
+[![GoDoc](https://godoc.org/github.com/livesession/opentelemetry-go?status.svg)](https://pkg.go.dev/github.com/livesession/opentelemetry-go/exporters/otlp)
 
 
 This exporter exports OpenTelemetry spans and metrics to the OpenTelemetry Collector.
@@ -11,7 +11,7 @@ This exporter exports OpenTelemetry spans and metrics to the OpenTelemetry Colle
 The exporter can be installed using standard `go` functionality.
 
 ```bash
-$ go get -u go.opentelemetry.io/otel/exporters/otlp
+$ go get -u github.com/livesession/opentelemetry-go/exporters/otlp
 ```
 
 A new exporter can be created using the `NewExporter` function.
@@ -22,10 +22,10 @@ package main
 import (
 	"log"
 
-	"go.opentelemetry.io/otel/exporters/otlp"
-	"go.opentelemetry.io/otel/sdk/metric/controller/push"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/exporters/otlp"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/push"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 func main() {

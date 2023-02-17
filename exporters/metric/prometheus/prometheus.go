@@ -23,14 +23,14 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	"go.opentelemetry.io/otel/sdk/metric/controller/pull"
-	"go.opentelemetry.io/otel/sdk/metric/processor/basic"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/pull"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
 )
 
 // Exporter supports Prometheus pulls.  It does not implement the
@@ -121,14 +121,14 @@ func NewExportPipeline(config Config, options ...pull.Option) (*Exporter, error)
 // InstallNewPipeline instantiates a NewExportPipeline and registers it globally.
 // Typically called as:
 //
-// 	hf, err := prometheus.InstallNewPipeline(prometheus.Config{...})
+//	hf, err := prometheus.InstallNewPipeline(prometheus.Config{...})
 //
-// 	if err != nil {
-// 		...
-// 	}
-// 	http.HandleFunc("/metrics", hf)
-// 	defer pipeline.Stop()
-// 	... Done
+//	if err != nil {
+//		...
+//	}
+//	http.HandleFunc("/metrics", hf)
+//	defer pipeline.Stop()
+//	... Done
 func InstallNewPipeline(config Config, options ...pull.Option) (*Exporter, error) {
 	exp, err := NewExportPipeline(config, options...)
 	if err != nil {

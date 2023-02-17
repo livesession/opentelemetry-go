@@ -18,12 +18,12 @@ import (
 	"context"
 	"log"
 
-	"go.opentelemetry.io/otel/api/correlation"
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/exporters/stdout"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/correlation"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/exporters/stdout"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 var (

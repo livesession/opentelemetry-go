@@ -41,11 +41,11 @@ protobuf-source: $(SOURCE_PROTO_FILES) | $(PROTO_SOURCE_DIR)/
 
 # Changes go_package in .proto file to point to repo-local location
 define exec-replace-pkgname
-sed  's,go_package = "github.com/open-telemetry/opentelemetry-proto/gen/go,go_package = "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen,' < $(1) > $(2)
+sed  's,go_package = "github.com/open-telemetry/opentelemetry-proto/gen/go,go_package = "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen,' < $(1) > $(2)
 
 endef
 
-# replace opentelemetry-proto package name by go.opentelemetry.io/otel specific version
+# replace opentelemetry-proto package name by github.com/livesession/opentelemetry-go specific version
 $(SOURCE_PROTO_FILES): $(PROTO_SOURCE_DIR)/%.proto: $(OTEL_PROTO_SUBMODULE)/%.proto
 	@mkdir -p $(@D)
 	$(call exec-replace-pkgname,$<,$@)
@@ -61,8 +61,8 @@ gen-protobuf: $(SOURCE_PROTO_FILES) | $(PROTOBUF_GEN_DIR)/
 
 # requires `pax` to be installed, as it has consistent options for both BSD (Darwin) and Linux
 copy-protobufs: | $(PROTOBUF_GEN_DIR)/
-	find ./$(PROTOBUF_TEMP_DIR)/go.opentelemetry.io/otel/$(PROTOBUF_GEN_DIR) -type f -print0 | \
-      pax -0 -s ',^./$(PROTOBUF_TEMP_DIR)/go.opentelemetry.io/otel/$(PROTOBUF_GEN_DIR),,' -rw ./$(PROTOBUF_GEN_DIR)
+	find ./$(PROTOBUF_TEMP_DIR)/github.com/livesession/opentelemetry-go/$(PROTOBUF_GEN_DIR) -type f -print0 | \
+      pax -0 -s ',^./$(PROTOBUF_TEMP_DIR)/github.com/livesession/opentelemetry-go/$(PROTOBUF_GEN_DIR),,' -rw ./$(PROTOBUF_GEN_DIR)
 
 $(PROTO_SOURCE_DIR)/ $(PROTOBUF_GEN_DIR)/:
 	mkdir -p $@

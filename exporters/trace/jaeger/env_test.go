@@ -22,8 +22,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	ottest "go.opentelemetry.io/otel/internal/testing"
-	"go.opentelemetry.io/otel/label"
+	ottest "github.com/livesession/opentelemetry-go/internal/testing"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 func Test_parseTags(t *testing.T) {

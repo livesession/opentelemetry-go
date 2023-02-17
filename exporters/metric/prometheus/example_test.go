@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"net/http/httptest"
 
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/exporters/metric/prometheus"
-	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/metric/controller/pull"
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/exporters/metric/prometheus"
+	"github.com/livesession/opentelemetry-go/label"
+	"github.com/livesession/opentelemetry-go/sdk/metric/controller/pull"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 // This test demonstrates that it is relatively difficult to setup a

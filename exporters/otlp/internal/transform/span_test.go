@@ -25,13 +25,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 
-	tracepb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
-	"go.opentelemetry.io/otel/label"
+	tracepb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/trace/v1"
+	"github.com/livesession/opentelemetry-go/label"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 func TestSpanKind(t *testing.T) {

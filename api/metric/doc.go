@@ -26,15 +26,15 @@
 //
 // The synchronous instrument names are:
 //
-//   Counter:           additive, monotonic
-//   UpDownCounter:     additive
-//   ValueRecorder:     non-additive
+//	Counter:           additive, monotonic
+//	UpDownCounter:     additive
+//	ValueRecorder:     non-additive
 //
 // and the asynchronous instruments are:
 //
-//   SumObserver:       additive, monotonic
-//   UpDownSumObserver: additive
-//   ValueObserver:     non-additive
+//	SumObserver:       additive, monotonic
+//	UpDownSumObserver: additive
+//	ValueObserver:     non-additive
 //
 // All instruments are provided with support for either float64 or
 // int64 input values.
@@ -46,4 +46,4 @@
 // The Provider interface supports obtaining a named Meter interface.
 // To obtain a Provider implementation, initialize and configure any
 // compatible SDK.
-package metric // import "go.opentelemetry.io/otel/api/metric"
+package metric // import "github.com/livesession/opentelemetry-go/api/metric"

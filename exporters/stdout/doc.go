@@ -14,4 +14,4 @@
 
 // Package stdout contains an OpenTelemetry exporter for both tracing and
 // metric telemetry to be written to an output destination as JSON.
-package stdout // import "go.opentelemetry.io/otel/exporters/stdout"
+package stdout // import "github.com/livesession/opentelemetry-go/exporters/stdout"

@@ -31,10 +31,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/trace"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 const (

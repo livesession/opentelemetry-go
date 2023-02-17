@@ -1,4 +1,4 @@
-module go.opentelemetry.io/otel/tools
+module github.com/livesession/opentelemetry-go/tools
 
 go 1.14
 

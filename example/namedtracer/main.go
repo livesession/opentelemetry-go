@@ -18,13 +18,13 @@ import (
 	"context"
 	"log"
 
-	"go.opentelemetry.io/otel/api/correlation"
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/example/namedtracer/foo"
-	"go.opentelemetry.io/otel/exporters/stdout"
-	"go.opentelemetry.io/otel/label"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"github.com/livesession/opentelemetry-go/api/correlation"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/example/namedtracer/foo"
+	"github.com/livesession/opentelemetry-go/exporters/stdout"
+	"github.com/livesession/opentelemetry-go/label"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 var (

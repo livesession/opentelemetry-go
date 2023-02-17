@@ -19,8 +19,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	commonpb "go.opentelemetry.io/otel/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
-	"go.opentelemetry.io/otel/label"
+	commonpb "github.com/livesession/opentelemetry-go/exporters/otlp/internal/opentelemetry-proto-gen/common/v1"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type attributeTest struct {

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package reducer // import "go.opentelemetry.io/otel/sdk/metric/processor/reducer"
+package reducer // import "github.com/livesession/opentelemetry-go/sdk/metric/processor/reducer"
 
 import (
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"

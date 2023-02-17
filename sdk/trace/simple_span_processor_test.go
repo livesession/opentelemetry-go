@@ -18,9 +18,9 @@ import (
 	"context"
 	"testing"
 
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
 	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
 	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
-	apitrace "go.opentelemetry.io/otel/api/trace"
 )
 
 type testExporter struct {

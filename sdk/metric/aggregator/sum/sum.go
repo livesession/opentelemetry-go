@@ -12,15 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package sum // import "go.opentelemetry.io/otel/sdk/metric/aggregator/sum"
+package sum // import "github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
 
 import (
 	"context"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/api/metric"
 )
 
 // Aggregator aggregates counter events.

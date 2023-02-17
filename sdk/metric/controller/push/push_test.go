@@ -24,6 +24,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/controller/controllertest"
@@ -31,9 +34,6 @@ import (
 	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
 	processorTest "github.com/livesession/opentelemetry-go/sdk/metric/processor/processortest"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
 )
 
 var testResource = resource.New(label.String("R", "V"))

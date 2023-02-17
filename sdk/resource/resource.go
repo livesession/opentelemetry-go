@@ -15,7 +15,7 @@
 package resource
 
 import (
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // Resource describes an entity about which identifying information

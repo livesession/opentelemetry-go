@@ -18,7 +18,7 @@ import (
 	"math/rand"
 	"sync"
 
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 
 	"github.com/livesession/opentelemetry-go/sdk/trace/internal"
 )

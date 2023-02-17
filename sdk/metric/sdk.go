@@ -21,14 +21,14 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	api "github.com/livesession/opentelemetry-go/api/metric"
+	internal "github.com/livesession/opentelemetry-go/internal/metric"
+	"github.com/livesession/opentelemetry-go/label"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/metric"
-	api "go.opentelemetry.io/otel/api/metric"
-	internal "go.opentelemetry.io/otel/internal/metric"
-	"go.opentelemetry.io/otel/label"
 )
 
 type (

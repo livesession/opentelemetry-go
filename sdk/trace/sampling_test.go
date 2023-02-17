@@ -17,7 +17,7 @@ package trace_test
 import (
 	"testing"
 
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 
 	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )

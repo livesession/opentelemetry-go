@@ -24,14 +24,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/metrictest"
 	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
 	processorTest "github.com/livesession/opentelemetry-go/sdk/metric/processor/processortest"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
 )
 
 // TestProcessor tests all the non-error paths in this package.

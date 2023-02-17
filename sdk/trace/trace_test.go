@@ -24,22 +24,22 @@ import (
 	"testing"
 	"time"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/label"
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	grpccodes "google.golang.org/grpc/codes"
 
+	"github.com/livesession/opentelemetry-go/api/apitest"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	otelcodes "github.com/livesession/opentelemetry-go/codes"
+	ottest "github.com/livesession/opentelemetry-go/internal/testing"
 	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
 	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/apitest"
-	"go.opentelemetry.io/otel/api/trace"
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	otelcodes "go.opentelemetry.io/otel/codes"
-	ottest "go.opentelemetry.io/otel/internal/testing"
 )
 
 var (

@@ -19,8 +19,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
+	"github.com/livesession/opentelemetry-go/label"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/label"
 )
 
 func TestWithResource(t *testing.T) {

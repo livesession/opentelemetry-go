@@ -12,17 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package histogram // import "go.opentelemetry.io/otel/sdk/metric/aggregator/histogram"
+package histogram // import "github.com/livesession/opentelemetry-go/sdk/metric/aggregator/histogram"
 
 import (
 	"context"
 	"sort"
 	"sync"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/api/metric"
 )
 
 // Note: This code uses a Mutex to govern access to the exclusive

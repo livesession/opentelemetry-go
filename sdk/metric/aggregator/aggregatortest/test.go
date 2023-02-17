@@ -22,10 +22,10 @@ import (
 	"testing"
 	"unsafe"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
+	ottest "github.com/livesession/opentelemetry-go/internal/testing"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/api/metric"
-	ottest "go.opentelemetry.io/otel/internal/testing"
 )
 
 const Magnitude = 1000

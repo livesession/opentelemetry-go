@@ -12,16 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package minmaxsumcount // import "go.opentelemetry.io/otel/sdk/metric/aggregator/minmaxsumcount"
+package minmaxsumcount // import "github.com/livesession/opentelemetry-go/sdk/metric/aggregator/minmaxsumcount"
 
 import (
 	"context"
 	"sync"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/api/metric"
 )
 
 type (

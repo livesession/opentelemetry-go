@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-package ddsketch // import "go.opentelemetry.io/otel/sdk/metric/aggregator/ddsketch"
+package ddsketch // import "github.com/livesession/opentelemetry-go/sdk/metric/aggregator/ddsketch"
 
 import (
 	"context"
@@ -20,10 +20,10 @@ import (
 
 	sdk "github.com/DataDog/sketches-go/ddsketch"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/api/metric"
 )
 
 // Config is an alias for the underlying DDSketch config object.

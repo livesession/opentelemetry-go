@@ -22,11 +22,11 @@ import (
 	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
 )
 
 const (
-	defaultTracerName = "go.opentelemetry.io/otel/sdk/tracer"
+	defaultTracerName = "github.com/livesession/opentelemetry-go/sdk/tracer"
 )
 
 // batcher contains export.SpanBatcher and its options.

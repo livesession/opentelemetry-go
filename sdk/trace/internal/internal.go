@@ -16,7 +16,7 @@
 package internal
 
 import (
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 // IDGenerator allows custom generators for TraceId and SpanId.

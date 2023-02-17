@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package metrictest // import "go.opentelemetry.io/otel/sdk/export/metric/metrictest"
+package metrictest // import "github.com/livesession/opentelemetry-go/sdk/export/metric/metrictest"
 
 import (
 	"context"
@@ -21,11 +21,11 @@ import (
 	"sync"
 	"time"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
 )
 
 type mapkey struct {

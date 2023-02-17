@@ -21,6 +21,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/array"
@@ -30,8 +32,6 @@ import (
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/minmaxsumcount"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
 	"github.com/livesession/opentelemetry-go/sdk/resource"
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
 )
 
 type (

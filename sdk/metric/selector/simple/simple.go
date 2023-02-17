@@ -12,16 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package simple // import "go.opentelemetry.io/otel/sdk/metric/selector/simple"
+package simple // import "github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
 
 import (
+	"github.com/livesession/opentelemetry-go/api/metric"
 	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/array"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/ddsketch"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/histogram"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/minmaxsumcount"
 	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
-	"go.opentelemetry.io/otel/api/metric"
 )
 
 type (

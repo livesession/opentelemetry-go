@@ -17,7 +17,7 @@ package internal
 import (
 	grpccodes "google.golang.org/grpc/codes"
 
-	otelcodes "go.opentelemetry.io/otel/codes"
+	otelcodes "github.com/livesession/opentelemetry-go/codes"
 )
 
 // conversions are the equivalence mapping from OpenTelemetry to gRPC codes.

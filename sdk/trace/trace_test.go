@@ -918,7 +918,7 @@ func TestRecordError(t *testing.T) {
 	}{
 		{
 			err: ottest.NewTestError("test error"),
-			typ: "go.opentelemetry.io/otel/internal/testing.TestError",
+			typ: "github.com/livesession/opentelemetry-go/internal/testing.TestError",
 			msg: "test error",
 		},
 		{
@@ -1004,7 +1004,7 @@ func TestRecordErrorWithStatus(t *testing.T) {
 				Name: errorEventName,
 				Time: errTime,
 				Attributes: []label.KeyValue{
-					errorTypeKey.String("go.opentelemetry.io/otel/internal/testing.TestError"),
+					errorTypeKey.String("github.com/livesession/opentelemetry-go/internal/testing.TestError"),
 					errorMessageKey.String("test error"),
 				},
 			},

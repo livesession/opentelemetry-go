@@ -17,7 +17,7 @@ package metric
 import (
 	"context"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // The file is organized as follows:

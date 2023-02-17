@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"sync"
 
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // Provider is a standard metric.Provider for wrapping `MeterImpl`

@@ -19,7 +19,7 @@ import (
 	"errors"
 	"strings"
 
-	"go.opentelemetry.io/otel/api/propagation"
+	"github.com/livesession/opentelemetry-go/api/propagation"
 )
 
 const (
@@ -81,13 +81,13 @@ const (
 // B3 propagator serializes SpanContext to/from B3 Headers.
 // This propagator supports both versions of B3 headers,
 //  1. Single Header:
-//    b3: {TraceId}-{SpanId}-{SamplingState}-{ParentSpanId}
+//     b3: {TraceId}-{SpanId}-{SamplingState}-{ParentSpanId}
 //  2. Multiple Headers:
-//    x-b3-traceid: {TraceId}
-//    x-b3-parentspanid: {ParentSpanId}
-//    x-b3-spanid: {SpanId}
-//    x-b3-sampled: {SamplingState}
-//    x-b3-flags: {DebugFlag}
+//     x-b3-traceid: {TraceId}
+//     x-b3-parentspanid: {ParentSpanId}
+//     x-b3-spanid: {SpanId}
+//     x-b3-sampled: {SamplingState}
+//     x-b3-flags: {DebugFlag}
 type B3 struct {
 	// InjectEncoding are the B3 encodings used when injecting trace
 	// information. If no encoding is specified (i.e. `B3Unspecified`)

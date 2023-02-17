@@ -18,8 +18,8 @@ import (
 	"context"
 	"time"
 
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type Provider interface {
@@ -153,15 +153,15 @@ type StartConfig struct {
 
 // Link is used to establish relationship between two spans within the same Trace or
 // across different Traces. Few examples of Link usage.
-//   1. Batch Processing: A batch of elements may contain elements associated with one
-//      or more traces/spans. Since there can only be one parent SpanContext, Link is
-//      used to keep reference to SpanContext of all elements in the batch.
-//   2. Public Endpoint: A SpanContext in incoming client request on a public endpoint
-//      is untrusted from service provider perspective. In such case it is advisable to
-//      start a new trace with appropriate sampling decision.
-//      However, it is desirable to associate incoming SpanContext to new trace initiated
-//      on service provider side so two traces (from Client and from Service Provider) can
-//      be correlated.
+//  1. Batch Processing: A batch of elements may contain elements associated with one
+//     or more traces/spans. Since there can only be one parent SpanContext, Link is
+//     used to keep reference to SpanContext of all elements in the batch.
+//  2. Public Endpoint: A SpanContext in incoming client request on a public endpoint
+//     is untrusted from service provider perspective. In such case it is advisable to
+//     start a new trace with appropriate sampling decision.
+//     However, it is desirable to associate incoming SpanContext to new trace initiated
+//     on service provider side so two traces (from Client and from Service Provider) can
+//     be correlated.
 type Link struct {
 	SpanContext
 	Attributes []label.KeyValue

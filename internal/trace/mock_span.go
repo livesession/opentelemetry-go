@@ -18,9 +18,9 @@ import (
 	"context"
 	"time"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/label"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // MockSpan is a mock span used in association with MockTracer for testing purpose only.

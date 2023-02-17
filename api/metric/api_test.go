@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"testing"
 
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/api/unit"
-	mockTest "go.opentelemetry.io/otel/internal/metric"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/api/unit"
+	mockTest "github.com/livesession/opentelemetry-go/internal/metric"
+	"github.com/livesession/opentelemetry-go/label"
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"

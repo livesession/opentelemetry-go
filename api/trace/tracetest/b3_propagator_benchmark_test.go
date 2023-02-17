@@ -19,7 +19,7 @@ import (
 	"net/http"
 	"testing"
 
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 func BenchmarkExtractB3(b *testing.B) {

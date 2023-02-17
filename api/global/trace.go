@@ -15,8 +15,8 @@
 package global
 
 import (
-	"go.opentelemetry.io/otel/api/global/internal"
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/global/internal"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 // Tracer creates a named tracer that implements Tracer interface.
@@ -31,9 +31,12 @@ func Tracer(name string) trace.Tracer {
 // If none is registered then an instance of trace.NoopProvider is returned.
 //
 // Use the trace provider to create a named tracer. E.g.
-//     tracer := global.TraceProvider().Tracer("example.com/foo")
+//
+//	tracer := global.TraceProvider().Tracer("example.com/foo")
+//
 // or
-//     tracer := global.Tracer("example.com/foo")
+//
+//	tracer := global.Tracer("example.com/foo")
 func TraceProvider() trace.Provider {
 	return internal.TraceProvider()
 }

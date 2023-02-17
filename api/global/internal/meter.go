@@ -20,9 +20,9 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/api/metric/registry"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/api/metric/registry"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // This file contains the forwarding implementation of metric.Provider

@@ -21,9 +21,9 @@ import (
 	"sync"
 	"time"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 const (

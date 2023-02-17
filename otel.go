@@ -15,9 +15,9 @@
 package otel
 
 import (
-	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/api/propagation"
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/api/propagation"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 type Tracer = trace.Tracer

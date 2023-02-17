@@ -19,7 +19,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/otel/api/metric"
+	"github.com/livesession/opentelemetry-go/api/metric"
 )
 
 var (

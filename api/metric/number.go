@@ -21,7 +21,7 @@ import (
 	"math"
 	"sync/atomic"
 
-	"go.opentelemetry.io/otel/internal"
+	"github.com/livesession/opentelemetry-go/internal"
 )
 
 // NumberKind describes the data type of the Number.
@@ -426,9 +426,10 @@ func (n *Number) CompareAndSwapFloat64(of, nf float64) bool {
 
 // CompareNumber compares two Numbers given their kind.  Both numbers
 // should have the same kind.  This returns:
-//    0 if the numbers are equal
-//    -1 if the subject `n` is less than the argument `nn`
-//    +1 if the subject `n` is greater than the argument `nn`
+//
+//	0 if the numbers are equal
+//	-1 if the subject `n` is less than the argument `nn`
+//	+1 if the subject `n` is greater than the argument `nn`
 func (n *Number) CompareNumber(kind NumberKind, nn Number) int {
 	switch kind {
 	case Int64NumberKind:

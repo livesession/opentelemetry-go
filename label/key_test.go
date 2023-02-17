@@ -20,7 +20,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 func TestDefined(t *testing.T) {

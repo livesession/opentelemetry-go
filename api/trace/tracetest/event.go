@@ -17,7 +17,7 @@ package tracetest
 import (
 	"time"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // Event encapsulates the properties of calls to AddEvent or AddEventWithTimestamp.

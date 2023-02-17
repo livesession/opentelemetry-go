@@ -20,8 +20,8 @@ import (
 	"encoding/binary"
 	"sync/atomic"
 
-	apitrace "go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/internal/trace/parent"
+	apitrace "github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/internal/trace/parent"
 )
 
 // MockTracer is a simple tracer used for testing purpose only.

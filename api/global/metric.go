@@ -15,8 +15,8 @@
 package global
 
 import (
-	"go.opentelemetry.io/otel/api/global/internal"
-	"go.opentelemetry.io/otel/api/metric"
+	"github.com/livesession/opentelemetry-go/api/global/internal"
+	"github.com/livesession/opentelemetry-go/api/metric"
 )
 
 // Meter creates an implementation of the Meter interface from the global
@@ -36,9 +36,12 @@ func Meter(instrumentationName string, opts ...metric.MeterOption) metric.Meter 
 // forwards the Meter interface to the first registered Meter.
 //
 // Use the meter provider to create a named meter. E.g.
-//     meter := global.MeterProvider().Meter("example.com/foo")
+//
+//	meter := global.MeterProvider().Meter("example.com/foo")
+//
 // or
-//     meter := global.Meter("example.com/foo")
+//
+//	meter := global.Meter("example.com/foo")
 func MeterProvider() metric.Provider {
 	return internal.MeterProvider()
 }

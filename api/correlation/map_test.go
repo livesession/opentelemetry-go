@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"testing"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type testCase struct {

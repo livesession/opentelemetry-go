@@ -18,8 +18,8 @@ import (
 	"context"
 	"time"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 var _ trace.Tracer = (*Tracer)(nil)

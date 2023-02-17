@@ -18,8 +18,8 @@ import (
 	"context"
 	"time"
 
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type NoopSpan struct {

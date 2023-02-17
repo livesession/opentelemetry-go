@@ -20,7 +20,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 // defaultSpanContextFunc returns the default SpanContextFunc.

@@ -14,7 +14,7 @@
 
 package semconv
 
-import "go.opentelemetry.io/otel/label"
+import "github.com/livesession/opentelemetry-go/label"
 
 // Semantic conventions for attribute keys used for network related
 // operations.

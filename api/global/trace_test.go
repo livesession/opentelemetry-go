@@ -17,8 +17,8 @@ package global_test
 import (
 	"testing"
 
-	"go.opentelemetry.io/otel/api/global"
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/global"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 type testTraceProvider struct{}

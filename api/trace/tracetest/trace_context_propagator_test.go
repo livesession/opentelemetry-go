@@ -21,9 +21,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"go.opentelemetry.io/otel/api/propagation"
-	"go.opentelemetry.io/otel/api/trace"
-	mocktrace "go.opentelemetry.io/otel/internal/trace"
+	"github.com/livesession/opentelemetry-go/api/propagation"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	mocktrace "github.com/livesession/opentelemetry-go/internal/trace"
 )
 
 const (

@@ -17,7 +17,7 @@ package correlation
 import (
 	"context"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type correlationsType struct{}

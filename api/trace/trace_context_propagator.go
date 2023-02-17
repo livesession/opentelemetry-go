@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"go.opentelemetry.io/otel/api/propagation"
+	"github.com/livesession/opentelemetry-go/api/propagation"
 )
 
 const (
@@ -37,6 +37,7 @@ const (
 )
 
 // TraceContext propagates SpanContext in W3C TraceContext format.
+//
 //nolint:golint
 type TraceContext struct{}
 

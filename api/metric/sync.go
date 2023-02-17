@@ -18,7 +18,7 @@ import (
 	"context"
 	"errors"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // ErrSDKReturnedNilImpl is returned when a new `MeterImpl` returns nil.

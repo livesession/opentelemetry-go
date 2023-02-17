@@ -19,8 +19,6 @@ import (
 	"os"
 	"sync"
 	"sync/atomic"
-
-	"go.opentelemetry.io/otel"
 )
 
 var (

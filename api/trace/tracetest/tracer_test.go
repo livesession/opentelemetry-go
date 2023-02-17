@@ -22,11 +22,11 @@ import (
 	"testing"
 	"time"
 
-	"go.opentelemetry.io/otel/api/apitest"
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/api/trace/tracetest"
-	"go.opentelemetry.io/otel/internal/matchers"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/apitest"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace/tracetest"
+	"github.com/livesession/opentelemetry-go/internal/matchers"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 func TestTracer(t *testing.T) {

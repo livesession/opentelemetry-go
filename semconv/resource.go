@@ -14,7 +14,7 @@
 
 package semconv
 
-import "go.opentelemetry.io/otel/label"
+import "github.com/livesession/opentelemetry-go/label"
 
 // Semantic conventions for service resource attribute keys.
 const (

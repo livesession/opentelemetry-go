@@ -20,10 +20,10 @@ import (
 	"testing"
 	"time"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/internal/matchers"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/internal/matchers"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type Harness struct {

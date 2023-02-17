@@ -17,7 +17,7 @@ package label_test
 import (
 	"testing"
 
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type test struct{}

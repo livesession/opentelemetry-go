@@ -22,12 +22,12 @@ import (
 	"testing"
 	"time"
 
-	"go.opentelemetry.io/otel/api/trace"
-	"go.opentelemetry.io/otel/api/trace/tracetest"
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/internal/matchers"
-	ottest "go.opentelemetry.io/otel/internal/testing"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace/tracetest"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/internal/matchers"
+	ottest "github.com/livesession/opentelemetry-go/internal/testing"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 func TestSpan(t *testing.T) {

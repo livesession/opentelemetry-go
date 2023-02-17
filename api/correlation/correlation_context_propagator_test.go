@@ -22,9 +22,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"go.opentelemetry.io/otel/api/correlation"
-	"go.opentelemetry.io/otel/api/propagation"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/correlation"
+	"github.com/livesession/opentelemetry-go/api/propagation"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 func TestExtractValidDistributedContextFromHTTPReq(t *testing.T) {

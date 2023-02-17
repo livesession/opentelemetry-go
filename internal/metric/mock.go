@@ -18,10 +18,10 @@ import (
 	"context"
 	"sync"
 
-	"go.opentelemetry.io/otel/api/metric"
-	apimetric "go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/api/metric/registry"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/api/metric"
+	apimetric "github.com/livesession/opentelemetry-go/api/metric"
+	"github.com/livesession/opentelemetry-go/api/metric/registry"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 type (

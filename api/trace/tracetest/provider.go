@@ -17,7 +17,7 @@ package tracetest
 import (
 	"sync"
 
-	"go.opentelemetry.io/otel/api/trace"
+	"github.com/livesession/opentelemetry-go/api/trace"
 )
 
 type Provider struct {

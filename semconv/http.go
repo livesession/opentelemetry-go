@@ -21,8 +21,8 @@ import (
 	"strconv"
 	"strings"
 
-	"go.opentelemetry.io/otel/codes"
-	"go.opentelemetry.io/otel/label"
+	"github.com/livesession/opentelemetry-go/codes"
+	"github.com/livesession/opentelemetry-go/label"
 )
 
 // NetAttributesFromHTTPRequest generates attributes of the net

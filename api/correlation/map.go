@@ -14,7 +14,7 @@
 
 package correlation
 
-import "go.opentelemetry.io/otel/label"
+import "github.com/livesession/opentelemetry-go/label"
 
 type rawMap map[label.Key]label.Value
 type keySet map[label.Key]struct{}

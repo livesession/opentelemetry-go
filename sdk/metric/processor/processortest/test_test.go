@@ -20,12 +20,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	metricsdk "github.com/livesession/opentelemetry-go/sdk/metric"
+	processorTest "github.com/livesession/opentelemetry-go/sdk/metric/processor/processortest"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/api/metric"
 	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	metricsdk "go.opentelemetry.io/otel/sdk/metric"
-	processorTest "go.opentelemetry.io/otel/sdk/metric/processor/processortest"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 func generateTestData(proc export.Processor) {

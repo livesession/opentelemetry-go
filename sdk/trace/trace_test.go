@@ -32,14 +32,14 @@ import (
 	"github.com/stretchr/testify/require"
 	grpccodes "google.golang.org/grpc/codes"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/api/apitest"
 	"go.opentelemetry.io/otel/api/trace"
 	apitrace "go.opentelemetry.io/otel/api/trace"
 	otelcodes "go.opentelemetry.io/otel/codes"
 	ottest "go.opentelemetry.io/otel/internal/testing"
-	export "go.opentelemetry.io/otel/sdk/export/trace"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 var (

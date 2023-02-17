@@ -19,14 +19,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/array"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/ddsketch"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/histogram"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/minmaxsumcount"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
+	"github.com/livesession/opentelemetry-go/sdk/metric/selector/simple"
 	"go.opentelemetry.io/otel/api/metric"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/array"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/ddsketch"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/histogram"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/minmaxsumcount"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/sum"
-	"go.opentelemetry.io/otel/sdk/metric/selector/simple"
 )
 
 var (

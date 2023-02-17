@@ -21,9 +21,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/aggregatortest"
 	"go.opentelemetry.io/otel/api/metric"
 	ottest "go.opentelemetry.io/otel/internal/testing"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/aggregatortest"
 )
 
 const count = 100

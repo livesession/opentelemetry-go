@@ -14,6 +14,7 @@
 
 // This test is too large for the race detector.  This SDK uses no locks
 // that the race detector would help with, anyway.
+//go:build !race
 // +build !race
 
 package metric
@@ -31,12 +32,12 @@ import (
 	"testing"
 	"time"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/processortest"
 	"go.opentelemetry.io/otel/api/metric"
 	api "go.opentelemetry.io/otel/api/metric"
 	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	"go.opentelemetry.io/otel/sdk/metric/processor/processortest"
 )
 
 const (

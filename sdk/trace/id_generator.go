@@ -20,7 +20,7 @@ import (
 
 	"go.opentelemetry.io/otel/api/trace"
 
-	"go.opentelemetry.io/otel/sdk/trace/internal"
+	"github.com/livesession/opentelemetry-go/sdk/trace/internal"
 )
 
 type defaultIDGenerator struct {

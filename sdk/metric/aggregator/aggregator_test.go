@@ -21,11 +21,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/lastvalue"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
 	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/lastvalue"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/sum"
 )
 
 func TestInconsistentAggregatorErr(t *testing.T) {

@@ -20,7 +20,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/otel/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/export/trace"
 )
 
 // TestNoop tests only that the no-op does not crash in different scenarios.

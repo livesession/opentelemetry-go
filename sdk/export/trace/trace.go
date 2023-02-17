@@ -20,10 +20,10 @@ import (
 
 	"google.golang.org/grpc/codes"
 
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	apitrace "go.opentelemetry.io/otel/api/trace"
 	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 // SpanSyncer is a type for functions that receive a single sampled trace span.

@@ -20,14 +20,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	metricsdk "github.com/livesession/opentelemetry-go/sdk/metric"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/basic"
+	processorTest "github.com/livesession/opentelemetry-go/sdk/metric/processor/processortest"
+	"github.com/livesession/opentelemetry-go/sdk/metric/processor/reducer"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/api/metric"
 	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	metricsdk "go.opentelemetry.io/otel/sdk/metric"
-	"go.opentelemetry.io/otel/sdk/metric/processor/basic"
-	processorTest "go.opentelemetry.io/otel/sdk/metric/processor/processortest"
-	"go.opentelemetry.io/otel/sdk/metric/processor/reducer"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 var (

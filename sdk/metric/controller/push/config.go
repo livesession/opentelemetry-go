@@ -17,7 +17,7 @@ package push
 import (
 	"time"
 
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 // Config contains configuration for a push Controller.

@@ -20,7 +20,7 @@ import (
 	"context"
 	"sync"
 
-	"go.opentelemetry.io/otel/sdk/export/trace"
+	"github.com/livesession/opentelemetry-go/sdk/export/trace"
 )
 
 var _ trace.SpanBatcher = (*NoopExporter)(nil)

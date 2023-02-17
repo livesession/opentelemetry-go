@@ -22,8 +22,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/histogram"
 	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/histogram"
 )
 
 func TestStressInt64Histogram(t *testing.T) {

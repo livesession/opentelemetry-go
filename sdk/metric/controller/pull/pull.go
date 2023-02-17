@@ -18,12 +18,12 @@ import (
 	"context"
 	"time"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	sdk "github.com/livesession/opentelemetry-go/sdk/metric"
+	controllerTime "github.com/livesession/opentelemetry-go/sdk/metric/controller/time"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/api/metric"
 	"go.opentelemetry.io/otel/api/metric/registry"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	sdk "go.opentelemetry.io/otel/sdk/metric"
-	controllerTime "go.opentelemetry.io/otel/sdk/metric/controller/time"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 // DefaultCachePeriod determines how long a recently-computed result

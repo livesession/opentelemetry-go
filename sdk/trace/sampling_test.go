@@ -19,7 +19,7 @@ import (
 
 	"go.opentelemetry.io/otel/api/trace"
 
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	sdktrace "github.com/livesession/opentelemetry-go/sdk/trace"
 )
 
 func TestAlwaysParentSampleWithParentSampled(t *testing.T) {

@@ -19,8 +19,8 @@ import (
 	"math/rand"
 	"testing"
 
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/label"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 const conflict = 0.5

@@ -21,17 +21,17 @@ import (
 	"sync"
 	"time"
 
+	export "github.com/livesession/opentelemetry-go/sdk/export/metric"
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/array"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/ddsketch"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/histogram"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/lastvalue"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/minmaxsumcount"
+	"github.com/livesession/opentelemetry-go/sdk/metric/aggregator/sum"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 	"go.opentelemetry.io/otel/api/metric"
 	"go.opentelemetry.io/otel/label"
-	export "go.opentelemetry.io/otel/sdk/export/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/array"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/ddsketch"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/histogram"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/lastvalue"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/minmaxsumcount"
-	"go.opentelemetry.io/otel/sdk/metric/aggregator/sum"
-	"go.opentelemetry.io/otel/sdk/resource"
 )
 
 type (
@@ -95,9 +95,9 @@ type (
 // NewProcessor returns a new testing Processor implementation.
 // Verify expected outputs using Values(), e.g.:
 //
-//     require.EqualValues(t, map[string]float64{
-//         "counter.sum/A=1,B=2/R=V": 100,
-//     }, processor.Values())
+//	require.EqualValues(t, map[string]float64{
+//	    "counter.sum/A=1,B=2/R=V": 100,
+//	}, processor.Values())
 //
 // Where in the example A=1,B=2 is the encoded labels and R=V is the
 // encoded resource value.
@@ -310,9 +310,9 @@ func (o *Output) AddAccumulation(acc export.Accumulation) error {
 // NewExporter returns a new testing Exporter implementation.
 // Verify exporter outputs using Values(), e.g.,:
 //
-//     require.EqualValues(t, map[string]float64{
-//         "counter.sum/A=1,B=2/R=V": 100,
-//     }, exporter.Values())
+//	require.EqualValues(t, map[string]float64{
+//	    "counter.sum/A=1,B=2/R=V": 100,
+//	}, exporter.Values())
 //
 // Where in the example A=1,B=2 is the encoded labels and R=V is the
 // encoded resource value.

@@ -17,7 +17,7 @@ package pull
 import (
 	"time"
 
-	"go.opentelemetry.io/otel/sdk/resource"
+	"github.com/livesession/opentelemetry-go/sdk/resource"
 )
 
 // Config contains configuration for a pull Controller.

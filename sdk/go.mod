@@ -1,4 +1,4 @@
-module go.opentelemetry.io/otel/sdk
+module github.com/livesession/opentelemetry-go/sdk
 
 go 1.14
 

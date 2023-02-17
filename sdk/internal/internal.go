@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"time"
 
-	opentelemetry "go.opentelemetry.io/otel/sdk"
+	opentelemetry "github.com/livesession/opentelemetry-go/sdk"
 )
 
 // UserAgent is the user agent to be added to the outgoing

@@ -17,9 +17,9 @@ package trace
 import (
 	"context"
 
+	"github.com/livesession/opentelemetry-go/sdk/instrumentation"
 	apitrace "go.opentelemetry.io/otel/api/trace"
 	"go.opentelemetry.io/otel/internal/trace/parent"
-	"go.opentelemetry.io/otel/sdk/instrumentation"
 )
 
 type tracer struct {

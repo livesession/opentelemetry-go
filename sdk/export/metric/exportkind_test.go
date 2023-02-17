@@ -19,8 +19,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/livesession/opentelemetry-go/sdk/export/metric/aggregation"
 	"go.opentelemetry.io/otel/api/metric"
-	"go.opentelemetry.io/otel/sdk/export/metric/aggregation"
 )
 
 func TestExportKindIdentity(t *testing.T) {
